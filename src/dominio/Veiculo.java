@@ -18,10 +18,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-/**
- *
- * @author Jhony
- */
+
 
 @Entity
 @Table(name="tb_veiculo")
@@ -104,8 +101,7 @@ private static final long serialVersionUID = 1L;
 	
 	@Override
 	public String toString() {
-		return "Veiculo [codVeiculo=" + codVeiculo + ", placa=" + placa + ", cliente=" + cliente + ", locacoes="
-				+ locacoes + "]";
+		return "Veiculo [codVeiculo=" + codVeiculo + ", placa=" + placa + ", cliente=" + cliente ;
 	}
 
 	@Override

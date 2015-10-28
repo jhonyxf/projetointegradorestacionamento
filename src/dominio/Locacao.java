@@ -4,6 +4,7 @@ package dominio;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 
@@ -17,10 +18,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-/**
- *
- * @author Jhony
- */
+import javafx.scene.chart.PieChart.Data;
+
+
 
 @Entity
 @Table(name="tb_locacao")
@@ -67,12 +67,6 @@ public class Locacao implements Serializable {
     @ManyToOne
     @JoinColumn(name="veiculo")
     private Veiculo veiculo;
-    
-
-    
-    
-
-    
     
 
     public Locacao() {
@@ -196,18 +190,46 @@ public class Locacao implements Serializable {
     
     
     public boolean realizarLocacao(Cliente c, Vaga v, Veiculo ve, Funcionario f, TipoLocacao l, Date d){
-    	return (Boolean) null;
-    }
-    
-    public void finalizarLocacao(){}
-    
-    public BigDecimal consultarValorPagar(){
+    	this.cliente = c;
+    	this.vaga = v;
+    	this.veiculo = ve;
+    	this.funcionario = f;
+    	this.tipoLocacao = l;
+    	this.entrada = d;
     	
-    	return null;
+    	return true;
     }
     
-    public double quantidadeHoras(){
-    	return (Double) null;
+    public void finalizarLocacao(){
+    	//Data d = new Data();
+    	//Calendar c = Calendar.getInstance(); 
+    	//Convertendo as datas para milisegundos  
+       //long milisecondBegin = saida.getTime();  
+       //long milisecondEnd = entrada.getTime();
+        
+        //Date d = c.getTime();  
+      // long qtdhoras = milisecondBegin - milisecondEnd;
+        //Date qtdhoras = this.entrada - this.saida;
+     //  int a = Integer.parseInt(qtdhoras.format(d));
+       //int a = (int)d.getTime();  
+       
+    	//BigDecimal resultado = a * tipoLocacao.getPreco();
+    	//this.preco = resultado;
+    	
     }
+    
+    public void consultarValorPagar(){
+    	//Date data=new Date();
+    	//Date data1=new Date();
+    	//long tempo =data1.getTime() - data.getTime();
+    	//Date data2 = new Date(tempo);
+    	//System.out.println("Os minutos são:" + data2);
+    	
+    }
+    
+    
+    	
+    
+    
     
 }

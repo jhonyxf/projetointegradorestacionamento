@@ -50,6 +50,7 @@ public class Principal{
        Locacao loc1 = new Locacao(null,d,f1,v4,vg2,c1,tipo1);
        Locacao loc2 = new Locacao(null,e,f1,v3,vg1,c3,tipo3);
        
+       loc1.consultarValorPagar();
        em.getTransaction().begin();
        
        em.persist(f1);

@@ -15,10 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-/**
- *
- * @author Jhony
- */
+
 
 @Entity
 @Table(name="tb_cliente")
